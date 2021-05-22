@@ -93,10 +93,12 @@ const App: React.FC = () => {
 
               <Group header={<Header mode="secondary">Контакты</Header>} style={{ paddingBottom: 20 }}>
                 {Object.entries(activeMember.socials).map(([key, value]) => (
-                  <Link href={getSocialLink([key as keyof AboutUsMemberSocials, value as string])} target="_blank">
-                    <SimpleCell key={key} before={getSocialIcon(key as keyof AboutUsMemberSocials)}>
-                      {value}
-                    </SimpleCell>
+                  <Link
+                    key={key}
+                    href={getSocialLink([key as keyof AboutUsMemberSocials, value as string])}
+                    target="_blank"
+                  >
+                    <SimpleCell before={getSocialIcon(key as keyof AboutUsMemberSocials)}>{value}</SimpleCell>
                   </Link>
                 ))}
               </Group>
