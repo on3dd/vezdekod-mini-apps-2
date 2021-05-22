@@ -3,6 +3,14 @@ declare module '@limbus-mini-apps' {
     name: string;
     position: string;
     imageUri: string;
-    description: string;
+    socials: AboutUsMemberSocials;
   }
+
+  export type AboutUsMemberSocials = {
+    vk: string;
+    github?: string;
+    instagram?: string;
+  }
+
+  export type Modal = string | null;
 }

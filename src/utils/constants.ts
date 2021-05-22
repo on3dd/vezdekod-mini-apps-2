@@ -22,3 +22,7 @@ export const BREAKPOINTS = {
   laptop: '1366px',
   desktop: '1680px',
 };
+
+export enum ModalTypes {
+  MEMBER_PROFILE = 'MEMBER_PROFILE'
+}
